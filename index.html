@@ -1,0 +1,756 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Ricamo, stampa e pittura a mano su magliette, felpe e cappellini. Dal 1998 in corso di Porta Ticinese, a Milano. Da un pezzo. Preventivo gratuito.">
+<meta property="og:title" content="Ricamo e magliette personalizzate a Milano — Palocap">
+<meta property="og:description" content="Ricamo, stampa e pittura a mano su capi d'abbigliamento. Milano, dal 1998.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="it_IT">
+<meta name="theme-color" content="#08080A">
+<title>Ricamo e magliette personalizzate a Milano — Palocap</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Martian+Mono:wght@300..700&display=swap">
+<style>
+:root{
+  --bg:#08080A; --s1:#0E0E12; --s2:#15151A; --line:#22222A; --line-2:#31313B;
+  --w:#FFFFFF; --w2:#C9C9D2; --w3:#7A7A85;
+  --red:#E8121A; --red-hi:#FF2A22;
+  --or:#E8611B; --nv:#2C5FA8; --sd:#D9C5A8; --pt:#12607F;
+  --d:"Archivo","Helvetica Neue",Arial,sans-serif;
+  --m:"Martian Mono",ui-monospace,Menlo,Consolas,monospace;
+  --pad:clamp(16px,3.6vw,44px);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--w2);font-family:var(--d);
+  font-variation-settings:"wdth" 100,"wght" 400;font-size:16.5px;line-height:1.6;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--red-hi);outline-offset:3px}
+.wrap{max-width:1440px;margin:0 auto;padding:0 var(--pad)}
+
+/* technical type */
+.mono{font-family:var(--m);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--w3);font-weight:400}
+.mono.red{color:var(--red)}
+
+/* hairline grid ghost */
+.gridghost{position:fixed;inset:0;z-index:1;pointer-events:none;max-width:1440px;margin:0 auto;
+  padding:0 var(--pad);display:grid;grid-template-columns:repeat(6,1fr);opacity:.5}
+.gridghost i{border-left:1px solid rgba(255,255,255,.028)}
+.gridghost i:first-child{border-left:0}
+@media(max-width:760px){.gridghost{grid-template-columns:repeat(3,1fr)}}
+
+/* corner registration marks */
+.reg{position:relative}
+.reg::before,.reg::after{content:"";position:absolute;width:9px;height:9px;pointer-events:none;z-index:3}
+.reg::before{top:-1px;left:-1px;border-top:1px solid var(--red);border-left:1px solid var(--red)}
+.reg::after{bottom:-1px;right:-1px;border-bottom:1px solid var(--red);border-right:1px solid var(--red)}
+
+/* ---------- nav ---------- */
+.nav{position:sticky;top:0;z-index:80;background:rgba(8,8,10,.88);backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:56px;gap:20px}
+.nav .mk{height:17px;width:auto}
+.nav .lk{display:flex;gap:26px}
+.nav .lk a{font-family:var(--m);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--w3)}
+.nav .lk a:hover{color:var(--w)}
+.nav .go{font-family:var(--m);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--w);background:var(--red);padding:8px 14px;white-space:nowrap}
+.nav .go:hover{background:var(--red-hi)}
+@media(max-width:960px){.nav .lk{display:none}}
+
+/* ---------- hero ---------- */
+.hero{position:relative;z-index:2;padding:clamp(28px,5vw,62px) 0 0}
+.hero .top{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
+  border-bottom:1px solid var(--line);padding-bottom:12px;margin-bottom:clamp(26px,4vw,46px)}
+.hero .mk{width:min(72vw,400px);margin-bottom:clamp(22px,3.4vw,38px)}
+.hero h1{margin:0;font-size:clamp(46px,11.4vw,168px);line-height:.83;letter-spacing:-.038em;
+  text-transform:uppercase;font-variation-settings:"wdth" 118,"wght" 850;color:var(--w)}
+.hero h1 .hollow{color:transparent;-webkit-text-stroke:1.4px var(--w);font-variation-settings:"wdth" 118,"wght" 600}
+.hero h1 .rd{color:var(--red)}
+.hero h1 .h1sub{display:block;margin-top:clamp(16px,2.2vw,26px);font-size:clamp(12px,1.15vw,14px);
+  line-height:1.5;letter-spacing:.02em;text-transform:none;color:var(--w3);max-width:44ch;
+  font-variation-settings:"wdth" 100,"wght" 400}
+.hero .under{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(24px,4vw,60px);
+  margin-top:clamp(26px,4vw,48px);align-items:end}
+@media(max-width:900px){.hero .under{grid-template-columns:1fr;gap:30px}}
+.hero .sub{margin:0;max-width:46ch;font-size:clamp(16px,1.5vw,19px);color:var(--w2)}
+.idxl{list-style:none;margin:clamp(20px,2.6vw,34px) 0 0;padding:0;border-top:1px solid var(--line)}
+.idxl li{display:grid;grid-template-columns:46px 1fr auto;gap:12px;align-items:baseline;
+  border-bottom:1px solid var(--line);padding:11px 0}
+.idxl span{font-family:var(--m);font-size:9.5px;letter-spacing:.08em;color:var(--red)}
+.idxl b{font-size:16px;color:var(--w);text-transform:uppercase;letter-spacing:.004em;
+  font-variation-settings:"wdth" 106,"wght" 720}
+.idxl i{font-family:var(--m);font-size:9px;font-style:normal;letter-spacing:.05em;color:var(--w3);text-align:right}
+@media(max-width:900px){.idxl{display:none}}
+.hero .shot{margin:0;position:relative}
+.hero .shot img{width:100%;aspect-ratio:16/10;object-fit:cover;filter:grayscale(1) contrast(1.12)}
+.hero .shot .tagline{position:absolute;left:0;bottom:0;background:var(--bg);padding:7px 12px 0 0}
+.spec{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);
+  margin-top:clamp(30px,4vw,54px)}
+.spec div{padding:14px 16px 16px 0;border-right:1px solid var(--line)}
+.spec div:last-child{border-right:0}
+.spec dt{font-family:var(--m);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--w3);margin-bottom:9px}
+.spec dd{margin:0;font-size:clamp(14px,1.35vw,17px);color:var(--w);
+  font-variation-settings:"wdth" 104,"wght" 600;line-height:1.3}
+@media(max-width:760px){.spec{grid-template-columns:1fr 1fr}
+  .spec div{border-bottom:1px solid var(--line)}.spec div:nth-child(2n){border-right:0}}
+
+/* ---------- hero actions ---------- */
+.acts{display:flex;flex-wrap:wrap;align-items:center;align-content:flex-start;gap:10px;margin-top:clamp(20px,2.6vw,28px)}
+.act{display:inline-flex;align-items:center;flex:0 0 auto;line-height:1;gap:8px;font-family:var(--m);font-size:10px;
+  letter-spacing:.12em;text-transform:uppercase;padding:14px 22px;transition:background .18s ease,border-color .18s ease,transform .18s ease}
+.act.pri{background:var(--red);color:#fff}
+.act.pri:hover{background:var(--red-hi);transform:translateY(-1px)}
+.act.ghost{border:1px solid var(--line-2);color:var(--w)}
+.act.ghost:hover{border-color:var(--w);transform:translateY(-1px)}
+.act.wa{background:#1EA65A;color:#fff}
+.act.wa:hover{background:#25c265;transform:translateY(-1px)}
+
+/* rating chip */
+.rate{display:inline-flex;align-items:baseline;gap:9px;font-family:var(--m);font-size:9.5px;
+  letter-spacing:.08em;text-transform:uppercase;color:var(--w3)}
+.rate b{color:var(--w);font-size:12px;font-weight:400}
+.rate i{color:var(--red);font-style:normal}
+
+/* ---------- trust band ---------- */
+.trust{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--s1);
+  padding:clamp(28px,4vw,48px) 0}
+.trust .in{display:grid;grid-template-columns:auto 1fr;gap:clamp(20px,4vw,54px);align-items:start}
+@media(max-width:800px){.trust .in{grid-template-columns:1fr;gap:22px}}
+.trust .score{display:flex;flex-direction:column;gap:5px}
+.trust .score b{font-size:clamp(38px,5vw,58px);color:var(--w);line-height:1;
+  font-variation-settings:"wdth" 110,"wght" 800}
+.trust .score span{font-family:var(--m);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--w3)}
+.trust .quotes{display:grid;grid-template-columns:1fr 1fr;gap:clamp(18px,3vw,40px)}
+@media(max-width:800px){.trust .quotes{grid-template-columns:1fr;gap:20px}}
+.trust blockquote{margin:0;border-left:2px solid var(--red);padding-left:16px}
+.trust blockquote p{margin:0 0 8px;font-size:15.5px;color:var(--w2);line-height:1.6}
+.trust blockquote cite{font-family:var(--m);font-size:9px;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--w3);font-style:normal}
+
+/* ---------- faq ---------- */
+.faq{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);
+  border:1px solid var(--line);margin-top:clamp(28px,4vw,52px)}
+@media(max-width:820px){.faq{grid-template-columns:1fr}}
+.faq div{background:var(--bg);padding:20px 20px 24px}
+.faq h3{margin:0 0 9px;font-size:16px;color:var(--w);text-transform:uppercase;letter-spacing:-.008em;
+  font-variation-settings:"wdth" 106,"wght" 740}
+.faq p{margin:0;font-size:15px;color:var(--w2);line-height:1.6}
+
+/* ---------- sticky mobile bar ---------- */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:90;display:none;
+  background:rgba(8,8,10,.96);backdrop-filter:blur(14px);border-top:1px solid var(--line)}
+.bar a{flex:1;display:flex;align-items:center;justify-content:center;padding:15px 6px;
+  font-family:var(--m);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--w);
+  border-right:1px solid var(--line)}
+.bar a:last-child{border-right:0}
+.bar a.wa{background:#1EA65A}
+.bar a.pv{background:var(--red)}
+@media(max-width:900px){.bar{display:flex}body{padding-bottom:52px}}
+
+/* ---------- marquee ---------- */
+.marq{position:relative;z-index:2;overflow:hidden;border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);padding:9px 0;margin-top:clamp(34px,5vw,64px);background:var(--s1)}
+.marq .tr{display:flex;width:max-content;animation:sl 40s linear infinite}
+.marq span{font-family:var(--m);font-size:10px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--w3);padding-right:26px;white-space:nowrap}
+.marq b{color:var(--red);font-weight:400}
+@keyframes sl{from{transform:translate3d(0,0,0)}to{transform:translate3d(-50%,0,0)}}
+@media(prefers-reduced-motion:reduce){.marq .tr{animation:none}}
+
+/* ---------- sections ---------- */
+section{position:relative;z-index:2}
+.sec{padding:clamp(54px,8vw,124px) 0}
+.head{border-top:1px solid var(--line);padding-top:16px;display:grid;
+  grid-template-columns:96px 1fr;gap:clamp(16px,3vw,44px)}
+@media(max-width:700px){.head{grid-template-columns:1fr;gap:14px}}
+.head .idx{font-family:var(--m);font-size:10px;letter-spacing:.08em;color:var(--red);padding-top:6px}
+.head .kick{font-family:var(--m);font-size:10px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--w3);margin-bottom:clamp(14px,2.2vw,24px)}
+h2{margin:0;font-size:clamp(30px,5.4vw,76px);line-height:.9;letter-spacing:-.03em;text-transform:uppercase;
+  color:var(--w);font-variation-settings:"wdth" 114,"wght" 830}
+h2 .hollow{color:transparent;-webkit-text-stroke:1.2px var(--w);font-variation-settings:"wdth" 114,"wght" 600}
+.lede{font-size:clamp(16px,1.45vw,18.5px);color:var(--w2);max-width:56ch;margin:clamp(16px,2.2vw,26px) 0 0}
+
+/* ---------- lavorazioni ---------- */
+.works{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);
+  border:1px solid var(--line);margin-top:clamp(30px,4vw,56px)}
+@media(max-width:900px){.works{grid-template-columns:1fr}}
+.work{background:var(--bg);padding:0 0 24px}
+.work .im{position:relative;overflow:hidden}
+.work .im img{width:100%;aspect-ratio:4/5;object-fit:cover;filter:grayscale(1) contrast(1.14);
+  transition:transform .85s cubic-bezier(.2,.7,.25,1),filter .55s ease}
+.work:hover .im img,.work:focus-within .im img{transform:scale(1.05);filter:grayscale(0) contrast(1.02)}
+.work .code{position:absolute;top:10px;left:10px;z-index:2;font-family:var(--m);font-size:9.5px;
+  letter-spacing:.1em;color:var(--w);background:rgba(8,8,10,.72);backdrop-filter:blur(6px);padding:5px 8px}
+.work .bd{padding:20px 20px 0}
+.work h3{margin:0 0 10px;font-size:clamp(21px,2.2vw,29px);text-transform:uppercase;color:var(--w);
+  letter-spacing:-.022em;font-variation-settings:"wdth" 110,"wght" 800}
+.work p{margin:0 0 16px;font-size:15px;color:var(--w2);line-height:1.6}
+.work .rows{display:grid;gap:0;border-top:1px solid var(--line)}
+.work .rows div{display:flex;justify-content:space-between;gap:12px;padding:8px 0;border-bottom:1px solid var(--line)}
+.work .rows div:last-child{border-bottom:0}
+.work .rows dt{font-family:var(--m);font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:var(--w3)}
+.work .rows dd{margin:0;font-family:var(--m);font-size:9px;letter-spacing:.06em;color:var(--w)}
+
+/* ---------- band ---------- */
+.band{position:relative;z-index:2;height:clamp(400px,80vh,780px);overflow:hidden;background:var(--bg)}
+.band .med{position:absolute;left:0;right:0;top:-15%;height:130%;will-change:transform}
+.band .med img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.18)}
+.band .vl{position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(232,18,26,.26),rgba(8,8,10,.5) 44%,rgba(8,8,10,.95))}
+.band .tx{position:absolute;inset:0;display:flex;align-items:flex-end;padding-bottom:clamp(26px,4vw,58px);z-index:3}
+.band .head{border-color:rgba(255,255,255,.22)}
+.band .lede{color:rgba(255,255,255,.84)}
+
+/* ---------- archivio ---------- */
+.cat{display:grid;grid-template-columns:repeat(6,1fr);gap:1px;background:var(--line);
+  border:1px solid var(--line);margin-top:clamp(30px,4vw,56px)}
+@media(max-width:1080px){.cat{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:600px){.cat{grid-template-columns:repeat(2,1fr)}}
+.art{background:var(--s1);display:flex;flex-direction:column;position:relative}
+.art .sw{position:absolute;top:9px;right:9px;width:9px;height:9px;z-index:2}
+.art .im{aspect-ratio:1/1;display:grid;place-items:center;padding:14px;background:#fff}
+.art .im img{max-height:100%;width:auto;mix-blend-mode:multiply}
+.art .cp{padding:11px 12px 13px;margin-top:auto}
+.art .cp b{display:block;font-size:12.5px;color:var(--w);text-transform:uppercase;
+  font-variation-settings:"wdth" 104,"wght" 700;letter-spacing:.005em;margin-bottom:6px}
+.art .cp span{display:block;font-family:var(--m);font-size:8.5px;letter-spacing:.06em;color:var(--w3);line-height:1.7}
+.note{margin-top:clamp(24px,3vw,38px);color:var(--w2);max-width:58ch;font-size:16.5px}
+
+/* ---------- processo ---------- */
+.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);
+  border:1px solid var(--line);margin-top:clamp(30px,4vw,56px)}
+@media(max-width:900px){.flow{grid-template-columns:1fr 1fr}}
+@media(max-width:540px){.flow{grid-template-columns:1fr}}
+.stp{background:var(--bg);padding:20px 20px 26px}
+.stp .n{font-family:var(--m);font-size:10px;letter-spacing:.08em;color:var(--red);margin-bottom:clamp(20px,3vw,38px)}
+.stp h3{margin:0 0 9px;font-size:18px;text-transform:uppercase;color:var(--w);
+  font-variation-settings:"wdth" 108,"wght" 780;letter-spacing:-.012em}
+.stp p{margin:0;font-size:14.5px;color:var(--w2);line-height:1.6}
+
+/* ---------- gruppi ---------- */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(26px,4vw,64px);align-items:center;
+  margin-top:clamp(26px,3.4vw,46px)}
+@media(max-width:900px){.split{grid-template-columns:1fr;gap:32px}}
+.split img{width:100%;aspect-ratio:4/5;object-fit:cover;filter:grayscale(1) contrast(1.1)}
+.tick{list-style:none;margin:clamp(22px,3vw,34px) 0 0;padding:0}
+.tick li{display:grid;grid-template-columns:44px 1fr;gap:10px;border-top:1px solid var(--line);
+  padding:13px 0;font-size:15.5px;color:var(--w2)}
+.tick li b{font-family:var(--m);font-size:9px;letter-spacing:.08em;color:var(--red);padding-top:5px;font-weight:400}
+
+/* ---------- form ---------- */
+.btn{display:inline-block;background:var(--red);color:var(--w);font-family:var(--m);font-size:10px;
+  letter-spacing:.12em;text-transform:uppercase;padding:14px 26px;border:0;cursor:pointer;
+  transition:background .18s ease,transform .18s ease}
+.btn:hover{background:var(--red-hi);transform:translateY(-1px)}
+.qg{display:grid;grid-template-columns:.78fr 1.22fr;gap:clamp(28px,4vw,70px);
+  margin-top:clamp(28px,4vw,52px);align-items:start}
+@media(max-width:900px){.qg{grid-template-columns:1fr}}
+form{display:grid;gap:18px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media(max-width:600px){.row{grid-template-columns:1fr}}
+label{display:block;font-family:var(--m);font-size:9px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--w3);margin-bottom:8px}
+input,select,textarea{width:100%;background:var(--s1);border:1px solid var(--line);color:var(--w);
+  font-family:var(--d);font-size:16px;padding:12px 13px;border-radius:0}
+textarea{min-height:98px;resize:vertical}
+select{-webkit-appearance:none;appearance:none}
+select option{background:var(--s2);color:var(--w)}
+input::placeholder,textarea::placeholder{color:var(--w3)}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--red)}
+.dl div{border-top:1px solid var(--line);padding:13px 0}
+.dl dt{font-family:var(--m);font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--w3);margin-bottom:6px}
+.dl dd{margin:0;font-size:17px;color:var(--w)}
+.qn{margin:0;font-family:var(--m);font-size:9.5px;letter-spacing:.04em;color:var(--w3);line-height:1.9}
+.todo{color:var(--red)}
+
+/* ---------- negozi ---------- */
+.shops{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);
+  border:1px solid var(--line);margin-top:clamp(28px,3.6vw,50px)}
+@media(max-width:820px){.shops{grid-template-columns:1fr}}
+.shop{background:var(--bg);padding:24px 22px 28px}
+.shop h3{margin:0 0 6px;font-size:clamp(23px,2.6vw,32px);text-transform:uppercase;color:var(--w);
+  font-variation-settings:"wdth" 110,"wght" 800;letter-spacing:-.02em}
+.shop .ad{margin:0 0 18px;font-size:15.5px;color:var(--w2)}
+.hrs{display:grid;grid-template-columns:auto 1fr;gap:7px 20px;margin:0 0 18px}
+.hrs dt{font-family:var(--m);font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:var(--w3);padding-top:4px}
+.hrs dd{margin:0;font-size:15px;color:var(--w);font-variant-numeric:tabular-nums}
+.shop a.t{font-family:var(--m);font-size:10px;letter-spacing:.1em;color:var(--w);border-bottom:1px solid var(--line-2);padding-bottom:3px}
+.shop a.t:hover{border-color:var(--red);color:var(--red)}
+
+/* ---------- footer ---------- */
+footer{position:relative;z-index:2;border-top:1px solid var(--line);padding:clamp(40px,5vw,64px) 0 24px}
+footer .tp{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:clamp(24px,4vw,50px);
+  padding-bottom:28px;border-bottom:1px solid var(--line)}
+@media(max-width:820px){footer .tp{grid-template-columns:1fr 1fr}}
+@media(max-width:540px){footer .tp{grid-template-columns:1fr;gap:26px}}
+footer .mk{width:190px;margin-bottom:14px}
+footer p{margin:0;line-height:2;font-size:15px;color:var(--w2)}
+footer a:hover{color:var(--w)}
+footer .bt{padding-top:18px;display:flex;flex-wrap:wrap;gap:9px 26px;justify-content:space-between}
+</style>
+</head>
+<body>
+
+
+<div class="gridghost" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "#palocap",
+      "name": "Palocap",
+      "alternateName": "Palocap — make your own fashion",
+      "url": "https://www.palocap.com/",
+      "description": "Abbigliamento personalizzato a Milano dal 1998: ricamo, stampa e pittura a mano su magliette, felpe, polo e cappellini.",
+      "foundingDate": "1998",
+      "email": "palocap@palocap.com",
+      "telephone": "+39-02-8901-2340",
+      "sameAs": ["https://www.instagram.com/palocap_/", "https://www.instagram.com/palocap_due/"],
+      "areaServed": { "@type": "City", "name": "Milano" },
+      "knowsAbout": ["ricamo personalizzato", "stampa su magliette", "pittura a mano su capi", "divise di gruppo"]
+    },
+    {
+      "@type": "ClothingStore",
+      "@id": "#porta-ticinese",
+      "name": "Palocap — Porta Ticinese",
+      "parentOrganization": { "@id": "#palocap" },
+      "description": "Ricamo, stampa e pittura a mano su capi d'abbigliamento. Minimo d'ordine un pezzo.",
+      "telephone": "+39-02-8901-2340",
+      "email": "palocap@palocap.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Corso di Porta Ticinese 1",
+        "addressLocality": "Milano",
+        "postalCode": "20123",
+        "addressRegion": "MI",
+        "addressCountry": "IT"
+      },
+      "openingHoursSpecification": [
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": "Monday", "opens": "16:00", "closes": "19:00" },
+        { "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "10:00", "closes": "19:00" }
+      ],
+      "sameAs": ["https://www.instagram.com/palocap_/"]
+    },
+    {
+      "@type": "ClothingStore",
+      "@id": "#piazza-piemonte",
+      "name": "Palocap2 — Piazza Piemonte",
+      "parentOrganization": { "@id": "#palocap" },
+      "description": "Ricamo, stampa e pittura a mano su capi d'abbigliamento.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Piazza Piemonte 10",
+        "addressLocality": "Milano",
+        "postalCode": "20145",
+        "addressRegion": "MI",
+        "addressCountry": "IT"
+      },
+      "openingHoursSpecification": [
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": "Monday", "opens": "15:00", "closes": "19:15" },
+        { "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "10:00", "closes": "19:15" }
+      ],
+      "sameAs": ["https://www.instagram.com/palocap_due/"]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Posso portare un capo mio?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Sì. Puoi portare la tua felpa, la tua giacca o la tua camicia e ricamarci sopra quello che vuoi. Oppure scegli un capo dei nostri." } },
+        { "@type": "Question", "name": "Qual è il minimo d'ordine?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Un pezzo. Facciamo il singolo regalo come la fornitura per una squadra: cambia il prezzo al pezzo, non la disponibilità." } },
+        { "@type": "Question", "name": "Quanto costa una maglietta personalizzata?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Dipende dal capo, dalla lavorazione e da quanti pezzi sono. Il preventivo è gratuito e al banco si fa in cinque minuti." } },
+        { "@type": "Question", "name": "Che file serve per ricamare un logo?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Va bene qualsiasi immagine per capire l'idea. Se hai un file vettoriale (AI, EPS, PDF) il risultato è più pulito, soprattutto sul ricamo, ma se non ce l'hai lo ridisegniamo noi." } }
+      ]
+    }
+  ]
+}
+</script>
+
+<nav class="nav">
+  <div class="wrap">
+    <a href="#top" aria-label="Palocap"><img class="mk" src="assets/logo.png" alt="Palocap — make your own fashion" width="640" height="119" decoding="async"></a>
+    <div class="lk">
+      <a href="#lavorazioni">Lavorazioni</a>
+      <a href="#archivio">Archivio</a>
+      <a href="#processo">Processo</a>
+      <a href="#gruppi">Gruppi</a>
+      <a href="#negozi">Negozi</a>
+    </div>
+    <a class="go" href="#preventivo">Preventivo</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="top">
+      <span class="mono">Ricamo / Stampa / Pittura a mano — Milano</span>
+      <span class="rate"><i>★</i><b>4,9</b> su Google — 31 recensioni</span>
+    </div>
+    <img class="mk" src="assets/logo.png" alt="Palocap — make your own fashion" width="640" height="119" decoding="async">
+    <h1>Il capo<br><span class="hollow">che cerchi</span><br>non esiste <span class="rd">ancora.</span><span class="h1sub">Ricamo, stampa e pittura a mano su magliette, felpe e cappellini — Milano, dal 1998</span></h1>
+    <div class="under">
+      <div>
+      <p class="sub">Porti un'idea — un disegno, una frase, un logo, anche solo detta a voce — ed esce dal laboratorio cucita addosso a qualcosa che indosserai. Da un pezzo a duecento, con il preventivo scritto prima di iniziare.</p>
+        <div class="acts">
+          <a class="act pri" href="#preventivo">Chiedi un preventivo</a>
+          <a class="act wa" data-wa href="https://wa.me/39XXXXXXXXXX?text=Ciao%20Palocap%2C%20vorrei%20un%20preventivo%20per%3A%20">Scrivici su WhatsApp</a>
+          <a class="act ghost" href="tel:+390289012340">02 8901 2340</a>
+        </div>
+        <ol class="idxl">
+          <li><span>[01]</span><b>Ricamo</b><i>Filo su tessuto</i></li>
+          <li><span>[02]</span><b>Stampa</b><i>Colori pieni</i></li>
+          <li><span>[03]</span><b>Dipinto a mano</b><i>Pezzo unico</i></li>
+        </ol>
+      </div>
+      <figure class="shot reg">
+        <img src="assets/hero.webp" alt="Ritratto d'archivio Palocap, campagna anni Duemila" width="291" height="425" decoding="async">
+        <span class="tagline mono">Fig. 01 — Archivio Palocap, 2004</span>
+      </figure>
+    </div>
+    <dl class="spec">
+      <div><dt>Fondato</dt><dd>1998</dd></div>
+      <div><dt>Punti vendita</dt><dd>Porta Ticinese 1<br>Piazza Piemonte 10</dd></div>
+      <div><dt>Lavorazioni</dt><dd>Ricamo / Stampa<br>Pittura a mano</dd></div>
+      <div><dt>Minimo d'ordine</dt><dd>1 pezzo</dd></div>
+    </dl>
+  </div>
+</header>
+
+<div class="marq" aria-hidden="true"><div class="tr">
+  <span>MAKE YOUR OWN FASHION <b>✳</b> RICAMO <b>✳</b> STAMPA <b>✳</b> DIPINTO A MANO <b>✳</b> MILANO DAL 1998 <b>✳</b> ART. 981 <b>✳</b> ART. 07 <b>✳</b> ART. 99 <b>✳</b></span>
+  <span>MAKE YOUR OWN FASHION <b>✳</b> RICAMO <b>✳</b> STAMPA <b>✳</b> DIPINTO A MANO <b>✳</b> MILANO DAL 1998 <b>✳</b> ART. 981 <b>✳</b> ART. 07 <b>✳</b> ART. 99 <b>✳</b></span>
+</div></div>
+
+<section class="sec" id="lavorazioni">
+  <div class="wrap">
+    <div class="head">
+      <div class="idx">[ 01 ]</div>
+      <div>
+        <div class="kick">Lavorazioni — ricamo, stampa, pittura a mano</div>
+        <h2>Tre modi di<br>metterci <span class="hollow">mano</span></h2>
+        <p class="lede">Non c'è un catalogo da sfogliare. C'è un banco, le macchine accese dietro e la cosa che hai in testa. Il resto si decide insieme, in negozio.</p>
+      </div>
+    </div>
+    <div class="works">
+      <article class="work">
+        <div class="im reg"><span class="code">MET. 01 / RICAMO</span><img src="assets/ricamo.webp" alt="Cappellini ricamati coordinati" width="440" height="440" decoding="async" loading="lazy"></div>
+        <div class="bd">
+          <h3>Ricamo</h3>
+          <p>Filo su tessuto, con le nostre macchine, in negozio. Felpe, polo e cappellini ricamati su misura: non si stacca, non sbiadisce, non si stira via.</p>
+          <dl class="rows">
+            <div><dt>Supporti</dt><dd>Cappelli / Felpe / Polo</dd></div>
+            <div><dt>Colori filo</dt><dd>A campionario</dd></div>
+            <div><dt>Durata</dt><dd>Permanente</dd></div>
+          </dl>
+        </div>
+      </article>
+      <article class="work">
+        <div class="im reg"><span class="code">MET. 02 / STAMPA</span><img src="assets/stampa.webp" alt="Capi Palocap in lavorazione" width="440" height="440" decoding="async" loading="lazy"></div>
+        <div class="bd">
+          <h3>Stampa</h3>
+          <p>Magliette e felpe personalizzate con disegni grandi e colori pieni. Il modo giusto per vestire una squadra, uno staff o un evento.</p>
+          <dl class="rows">
+            <div><dt>Supporti</dt><dd>T-shirt / Felpe</dd></div>
+            <div><dt>Resa</dt><dd>Colori pieni</dd></div>
+            <div><dt>Ideale da</dt><dd>10 pezzi</dd></div>
+          </dl>
+        </div>
+      </article>
+      <article class="work">
+        <div class="im reg"><span class="code">MET. 03 / PENNELLO</span><img src="assets/dipinto.webp" alt="Magliette dipinte a mano" width="440" height="440" decoding="async" loading="lazy"></div>
+        <div class="bd">
+          <h3>Dipinto a mano</h3>
+          <p>Quello che nessuna macchina fa uguale due volte. Pennello sul capo, un pezzo alla volta.</p>
+          <dl class="rows">
+            <div><dt>Supporti</dt><dd>Tutti</dd></div>
+            <div><dt>Tiratura</dt><dd>Pezzo unico</dd></div>
+            <div><dt>Ideale per</dt><dd>Regalo</dd></div>
+          </dl>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="band" data-px>
+  <div class="med"><img src="assets/campagna-neve.webp" alt="Campagna Palocap, collezione neve, anni Duemila" width="291" height="417" decoding="async" loading="lazy"></div>
+  <div class="vl"></div>
+  <div class="tx"><div class="wrap">
+    <div class="head">
+      <div class="idx" style="color:#fff">[ ARCH ]</div>
+      <div>
+        <div class="kick" style="color:rgba(255,255,255,.62)">Archivio — campagna neve, 2004</div>
+        <h2>Prima di vestire te<br>vestivamo <span class="hollow">la montagna</span></h2>
+        <p class="lede">Palocap disegnava e produceva collezioni tecniche proprie molto prima che «personalizzato» diventasse una parola di moda.</p>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<section class="sec" id="archivio">
+  <div class="wrap">
+    <div class="head">
+      <div class="idx">[ 02 ]</div>
+      <div>
+        <div class="kick">Archivio — collezioni 2004 / 2007</div>
+        <h2>I capi che abbiamo<br><span class="hollow">disegnato</span></h2>
+        <p class="lede">Prima di ricamare le idee degli altri abbiamo passato anni a disegnare le nostre. Questi sono i modelli usciti dal laboratorio di Porta Ticinese.</p>
+      </div>
+    </div>
+    <div class="cat">
+      <article class="art"><span class="sw" style="background:var(--red)"></span><div class="im"><img src="assets/archivio-sco.webp" alt="Maglia tecnica rossa, archivio Palocap" width="289" height="235" decoding="async" loading="lazy"></div><div class="cp"><b>Maglia SCO</b><span>ART. SCO<br>COL. ROSSO<br>A.I. 2004</span></div></article>
+      <article class="art"><span class="sw" style="background:#fff"></span><div class="im"><img src="assets/archivio-tr.webp" alt="Maglia tecnica nera e rossa, archivio Palocap" width="300" height="200" decoding="async" loading="lazy"></div><div class="cp"><b>Maglia TR</b><span>ART. TR<br>COL. NERO<br>A.I. 2004</span></div></article>
+      <article class="art"><span class="sw" style="background:var(--or)"></span><div class="im"><img src="assets/archivio-g1-99.webp" alt="Maglia arancione numero 99, archivio Palocap" width="300" height="201" decoding="async" loading="lazy"></div><div class="cp"><b>Maglia G1</b><span>ART. 99<br>COL. ARANCIO<br>P.E. 2004</span></div></article>
+      <article class="art"><span class="sw" style="background:var(--nv)"></span><div class="im"><img src="assets/archivio-mm-981-blu.webp" alt="Maglia blu numero 981, archivio Palocap" width="300" height="215" decoding="async" loading="lazy"></div><div class="cp"><b>Maglia MM</b><span>ART. 981<br>COL. BLU<br>P.E. 2004</span></div></article>
+      <article class="art"><span class="sw" style="background:var(--sd)"></span><div class="im"><img src="assets/archivio-mm-981-sabbia.webp" alt="Maglia sabbia numero 981, archivio Palocap" width="300" height="215" decoding="async" loading="lazy"></div><div class="cp"><b>Maglia MM</b><span>ART. 981<br>COL. SABBIA<br>P.E. 2004</span></div></article>
+      <article class="art"><span class="sw" style="background:var(--red)"></span><div class="im"><img src="assets/archivio-fced-07.webp" alt="Felpa con cappuccio rossa numero 07, archivio Palocap" width="300" height="192" decoding="async" loading="lazy"></div><div class="cp"><b>Felpa FCED</b><span>ART. 07<br>COL. ROSSO<br>A.I. 2005</span></div></article>
+    </div>
+    <p class="note">Quei numeri — 99, 981, 07 — erano nostri. Oggi il numero sul capo lo scegli tu; il modo di farlo è rimasto identico.</p>
+  </div>
+</section>
+
+<section class="sec" id="processo" style="padding-top:0">
+  <div class="wrap">
+    <div class="head">
+      <div class="idx">[ 03 ]</div>
+      <div><div class="kick">Processo</div><h2>Quattro <span class="hollow">passaggi</span></h2></div>
+    </div>
+    <div class="flow">
+      <div class="stp"><div class="n">[ 01 ]</div><h3>Porti l'idea</h3><p>Un disegno, una foto, un logo, una frase. Anche solo detta a voce: la mettiamo giù noi.</p></div>
+      <div class="stp"><div class="n">[ 02 ]</div><h3>Scegli il capo</h3><p>T-shirt, felpa, polo, cappellino, giacca. Il tuo, oppure uno dei nostri.</p></div>
+      <div class="stp"><div class="n">[ 03 ]</div><h3>Filo e posizione</h3><p>Colore del filo, dove va, quanto grande. E quale delle tre lavorazioni conviene davvero.</p></div>
+      <div class="stp"><div class="n">[ 04 ]</div><h3>Passi a ritirare</h3><p>Ti diciamo quando è pronto. Porta Ticinese o Piazza Piemonte, scegli tu.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="gruppi" style="padding-top:0">
+  <div class="wrap">
+    <div class="head">
+      <div class="idx">[ 04 ]</div>
+      <div><div class="kick">Gruppi / Squadre / Aziende</div><h2>Divise di gruppo<br><span class="hollow">personalizzate</span></h2></div>
+    </div>
+    <div class="split">
+      <div>
+        <p class="lede" style="margin-top:0">C'è chi torna ogni anno prima delle vacanze. «Non c'è una vacanza senza una divisa di gruppo creata da Palocap» — lo dicono loro, dal 2012.</p>
+        <ul class="tick">
+          <li><b>[01]</b><span>Da un pezzo a qualche centinaio</span></li>
+          <li><b>[02]</b><span>Stesso disegno su capi e taglie diverse — uomo, donna, bambino</span></li>
+          <li><b>[03]</b><span>Nome o numero diverso su ogni pezzo, senza cambiare il prezzo del disegno</span></li>
+          <li><b>[04]</b><span>Preventivo scritto prima di iniziare, sempre</span></li>
+        </ul>
+        <p style="margin-top:28px"><a class="btn" href="#preventivo">Preventivo per il gruppo</a></p>
+      </div>
+      <figure class="reg" style="margin:0"><img src="assets/gruppi.webp" alt="Gruppo con polo coordinate personalizzate da Palocap" width="500" height="500" decoding="async" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="domande" style="padding-top:0">
+  <div class="wrap">
+    <div class="head">
+      <div class="idx">[ 05 ]</div>
+      <div><div class="kick">Domande frequenti</div><h2>Quello che ci<br>chiedono <span class="hollow">sempre</span></h2></div>
+    </div>
+    <div class="faq">
+      <div>
+        <h3>Posso portare un capo mio?</h3>
+        <p>Sì. Puoi portare la tua felpa, la tua giacca o la tua camicia e ricamarci sopra quello che vuoi. Oppure scegli un capo dei nostri.</p>
+      </div>
+      <div>
+        <h3>Qual è il minimo d'ordine?</h3>
+        <p>Un pezzo. Facciamo il singolo regalo come la fornitura per una squadra: cambia il prezzo al pezzo, non la disponibilità.</p>
+      </div>
+      <div>
+        <h3>Quanto costa?</h3>
+        <p>Dipende dal capo, dalla lavorazione e da quanti pezzi sono. Il preventivo è gratuito e al banco si fa in cinque minuti — oppure scrivici e ti rispondiamo con un prezzo.</p>
+      </div>
+      <div>
+        <h3>Che file serve per un logo?</h3>
+        <p>Va bene qualsiasi immagine per capire l'idea. Se hai un file vettoriale (AI, EPS, PDF) il risultato è più pulito, soprattutto sul ricamo — ma se non ce l'hai lo ridisegniamo noi.</p>
+      </div>
+      <div>
+        <h3>Quanto tempo ci vuole?</h3>
+        <p class="todo">— tempi di consegna da confermare —</p>
+      </div>
+      <div>
+        <h3>Fate spedizioni?</h3>
+        <p class="todo">— da confermare: spedite fuori Milano? —</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="trust">
+  <div class="wrap in">
+    <div class="score">
+      <b>4,9</b>
+      <span>★★★★★ — 31 recensioni Google</span>
+    </div>
+    <div class="quotes">
+      <blockquote>
+        <p>«Ho acquistato una maglietta personalizzata, stampa perfetta e qualità della maglia ottima! Consigliatissimo!»</p>
+        <cite>Alex T. — recensione Google</cite>
+      </blockquote>
+      <blockquote>
+        <p>«Ordine consegnato in poco tempo, disponibili per le info sull'acquisto, risposte via mail immediate.»</p>
+        <cite>Riccardo M. — recensione Google</cite>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="preventivo" style="padding-top:0">
+  <div class="wrap">
+    <div class="head">
+      <div class="idx">[ 06 ]</div>
+      <div>
+        <div class="kick">Preventivo</div>
+        <h2>Dicci cosa <span class="hollow">ti serve</span></h2>
+        <p class="lede">Rispondiamo con un prezzo e una data. Oppure chiama, o passa: al banco il preventivo si fa in cinque minuti.</p>
+      </div>
+    </div>
+    <div class="qg">
+      <dl class="dl">
+        <div><dt>Telefono</dt><dd><a href="tel:+390289012340">02 8901 2340</a></dd></div>
+        <div><dt>Email</dt><dd><a href="mailto:palocap@palocap.com">palocap@palocap.com</a></dd></div>
+        <div><dt>Instagram</dt><dd><a href="https://www.instagram.com/palocap_/" target="_blank" rel="noopener">@palocap_</a></dd></div>
+        <div><dt>WhatsApp</dt><dd><a data-wa href="https://wa.me/39XXXXXXXXXX?text=Ciao%20Palocap%2C%20vorrei%20un%20preventivo%20per%3A%20">Scrivici su WhatsApp</a><span class="todo" data-wa-todo> — numero da inserire</span></dd></div>
+      </dl>
+      <form id="qf">
+        <div class="row">
+          <div><label for="f-nome">Nome</label><input id="f-nome" name="nome" required placeholder="Come ti chiami"></div>
+          <div><label for="f-tel">Telefono o email</label><input id="f-tel" name="contatto" required placeholder="Dove ti rispondiamo"></div>
+        </div>
+        <div class="row">
+          <div><label for="f-tec">Lavorazione</label><select id="f-tec" name="tecnica"><option>Ricamo</option><option>Stampa</option><option>Dipinto a mano</option><option>Non lo so ancora</option></select></div>
+          <div><label for="f-qta">Quantità</label><select id="f-qta" name="quantita"><option>1 pezzo</option><option>2–10</option><option>11–50</option><option>51–200</option><option>Più di 200</option></select></div>
+        </div>
+        <div><label for="f-capo">Capo</label><input id="f-capo" name="capo" placeholder="T-shirt, felpa, cappellino, polo, giacca…"></div>
+        <div><label for="f-msg">L'idea</label><textarea id="f-msg" name="messaggio" placeholder="Cosa ci va sopra, dove, e per quando ti serve"></textarea></div>
+        <button class="btn" type="submit">Invia la richiesta</button>
+        <p class="qn" id="qnote">Si apre la tua email con il messaggio già scritto.<br>Nessun dato viene salvato su questo sito.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="negozi" style="padding-top:0">
+  <div class="wrap">
+    <div class="head">
+      <div class="idx">[ 07 ]</div>
+      <div><div class="kick">Dove siamo — Milano</div><h2>Due negozi,<br>una <span class="hollow">città</span></h2></div>
+    </div>
+    <div class="shops">
+      <div class="shop">
+        <h3>Palocap</h3>
+        <p class="ad">Corso di Porta Ticinese 1, 20123 Milano<br>alle Colonne di San Lorenzo</p>
+        <dl class="hrs"><dt>Lun</dt><dd>16:00 — 19:00</dd><dt>Mar–Sab</dt><dd>10:00 — 19:00</dd><dt>Dom</dt><dd>Chiuso</dd></dl>
+        <a class="t" href="tel:+390289012340">02 8901 2340</a>
+      </div>
+      <div class="shop">
+        <h3>Palocap2</h3>
+        <p class="ad">Piazza Piemonte 10, 20145 Milano<br>zona Wagner</p>
+        <dl class="hrs"><dt>Lun</dt><dd>15:00 — 19:15</dd><dt>Mar–Sab</dt><dd>10:00 — 19:15</dd><dt>Dom</dt><dd>Chiuso</dd></dl>
+        <a class="t" href="https://www.instagram.com/palocap_due/" target="_blank" rel="noopener">@palocap_due</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="tp">
+      <div>
+        <img class="mk" src="assets/logo.png" alt="Palocap — make your own fashion" width="640" height="119" decoding="async">
+        <p style="max-width:32ch">Abbigliamento personalizzato a Milano dal 1998.</p>
+      </div>
+      <div>
+        <div class="mono" style="margin-bottom:12px">Contatti</div>
+        <p><a href="tel:+390289012340">02 8901 2340</a><br>
+           <a href="mailto:palocap@palocap.com">palocap@palocap.com</a><br>
+           <a href="https://www.instagram.com/palocap_/" target="_blank" rel="noopener">@palocap_</a></p>
+      </div>
+      <div>
+        <div class="mono" style="margin-bottom:12px">Negozi</div>
+        <p>Corso di Porta Ticinese 1<br>Piazza Piemonte 10<br>Milano</p>
+      </div>
+    </div>
+    <div class="bt">
+      <span class="mono">© 2026 Palocap — make your own fashion ®</span>
+      <span class="mono todo">Ragione sociale e P.IVA da completare</span>
+    </div>
+  </div>
+</footer>
+
+<div class="bar">
+  <a class="wa" data-wa href="https://wa.me/39XXXXXXXXXX?text=Ciao%20Palocap%2C%20vorrei%20un%20preventivo%20per%3A%20">WhatsApp</a>
+  <a href="tel:+390289012340">Chiama</a>
+  <a class="pv" href="#preventivo">Preventivo</a>
+</div>
+
+<script>
+(function(){
+  // WhatsApp links stay hidden until a real number replaces the placeholder
+  var placeholder = 'XXXXXXXXXX';
+  [].slice.call(document.querySelectorAll('[data-wa]')).forEach(function(a){
+    if ((a.getAttribute('href') || '').indexOf(placeholder) !== -1) a.remove();
+  });
+  if (!document.querySelector('[data-wa]')) {
+    [].slice.call(document.querySelectorAll('[data-wa-todo]')).forEach(function(e){
+      e.textContent = '— da inserire —';
+    });
+  }
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var bands = [].slice.call(document.querySelectorAll('[data-px]'));
+  if (bands.length && !reduce) {
+    var tick = false;
+    function place(){
+      var vh = window.innerHeight;
+      bands.forEach(function(b){
+        var m = b.querySelector('.med'); if (!m) return;
+        var r = b.getBoundingClientRect();
+        if (r.bottom < -240 || r.top > vh + 240) return;
+        var p = (r.top + r.height/2 - vh/2) / (vh/2 + r.height/2);
+        p = Math.max(-1, Math.min(1, p));
+        m.style.transform = 'translate3d(0,' + (p * 10).toFixed(2) + '%,0)';
+      });
+      tick = false;
+    }
+    function onScroll(){ if (!tick) { tick = true; requestAnimationFrame(place); } }
+    addEventListener('scroll', onScroll, {passive:true});
+    addEventListener('resize', onScroll, {passive:true});
+    place();
+  }
+  var f = document.getElementById('qf');
+  if (f) f.addEventListener('submit', function(e){
+    e.preventDefault();
+    function g(n){ var el = f.elements[n]; return el ? el.value.trim() : ''; }
+    var body = ['Nome: ' + g('nome'), 'Contatto: ' + g('contatto'), 'Lavorazione: ' + g('tecnica'),
+      'Quantita: ' + g('quantita'), 'Capo: ' + g('capo'), '', "L'idea:", g('messaggio'),
+      '', '— inviato dal sito palocap.com'].join('\n');
+    location.href = 'mailto:palocap@palocap.com?subject='
+      + encodeURIComponent('Richiesta preventivo — ' + (g('nome') || 'sito'))
+      + '&body=' + encodeURIComponent(body);
+    var n = document.getElementById('qnote');
+    if (n) n.textContent = 'Ho aperto la tua email con il messaggio già compilato. Se non parte, scrivici a palocap@palocap.com.';
+  });
+})();
+</script>
+
+</body>
+</html>
