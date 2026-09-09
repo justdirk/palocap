@@ -1,4 +1,26 @@
+# Palocap — palocap.com
+# Everyone is welcome, search engines and AI assistants alike.
+
 User-agent: *
+Allow: /
+
+# AI assistants' crawlers (ChatGPT, Claude, Perplexity, Google AI, Bing/Copilot, Meta, Apple)
+# listed explicitly so nobody ever "fixes" this file by blocking them.
+User-agent: GPTBot
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: ClaudeBot
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: anthropic-ai
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: Google-Extended
+User-agent: Bingbot
+User-agent: Applebot
+User-agent: Applebot-Extended
+User-agent: meta-externalagent
+User-agent: DuckAssistBot
 Allow: /
 
 Sitemap: https://www.palocap.com/sitemap.xml
