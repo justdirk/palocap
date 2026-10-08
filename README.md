@@ -1,7 +1,7 @@
 # Palocap — sito
 
 Sito statico per **Palocap**, abbigliamento personalizzato a Milano dal 1998.
-Ricamo, stampa e dipinto a mano. Corso di Porta Ticinese 1 e Piazza Piemonte 10.
+Ricamo, stampa e dipinto a mano. Corso di Porta Ticinese 1, Milano.
 
 ## Struttura
 
@@ -35,17 +35,17 @@ GitHub Pages, da `main` / root → https://justdirk.github.io/palocap/
 ## Contenuti
 
 - Logo storico recuperato dall'archivio del vecchio sito, ripulito e reso trasparente
-- Sezione **Archivio**: i modelli disegnati e prodotti da Palocap fra il 2004 e il 2007,
-  con i codici originali (ART. 99, ART. 981, ART. 07)
-- Fotografie: campagne d'archivio anni Duemila + scatti recenti da Instagram
+- Sezione **Linea Palocap**: le felpe e le t-shirt a marchio proprio, vendute in negozio
+- Fotografie: scatti del laboratorio e dei capi forniti dal negozio, più scatti da Instagram
 - Modulo preventivo: compone un'email precompilata, nessun backend richiesto
+- Dipinto a mano: rimanda a [notprinted.it](https://www.notprinted.it)
 
 ## Da completare
 
 - **Numero WhatsApp** — segnaposto in rosso nella sezione Preventivo
 - **Ragione sociale e partita IVA** nel footer, obbligatorie per legge su un sito aziendale italiano
-- **Fotografia**: servirebbe un servizio dedicato — macchina da ricamo in funzione,
-  primo piano del ricamo sul tessuto, pennello, coni di filo, interno negozio, ritratto al banco
+- **Fotografia**: restano utili una macchina da ricamo in funzione, un primo piano del
+  ricamo sul tessuto, il pennello e un ritratto al banco
 
 ## Segnaposto da sostituire
 
@@ -57,14 +57,13 @@ si nascondono da soli — il sito non mostra mai un link rotto.
 Restano inoltre da confermare, segnati in rosso nella pagina:
 
 - tempi di consegna (FAQ)
-- spedizioni fuori Milano (FAQ)
 - ragione sociale e partita IVA (footer)
 
 ## SEO
 
 Fatto: title e description mirati su «ricamo / magliette personalizzate Milano»,
-H1 con la riga di servizio, dati strutturati JSON-LD (Organization, due
-ClothingStore con indirizzi e orari, FAQPage), `robots.txt`, `sitemap.xml`,
+H1 con la riga di servizio, dati strutturati JSON-LD (Organization,
+ClothingStore con indirizzo e orari, FAQPage), `robots.txt`, `sitemap.xml`,
 alt text su tutte le immagini, `width`/`height` e `loading="lazy"`.
 
 Da completare quando il dominio è deciso:
@@ -99,3 +98,14 @@ palocap.com serve il vecchio sito Flash, i motori indicizzano quello.
 Nota: la valutazione Google è mostrata in pagina ma **non** è marcata nei dati
 strutturati. Le linee guida di Google vietano di marcare come proprie le
 recensioni raccolte da terzi: farlo rischia un'azione manuale.
+
+## Modifiche richieste dal cliente (ottobre 2026)
+
+Applicate: chiuso il riferimento al secondo negozio (Piazza Piemonte / Palocap2) in
+`index.html`, `en/index.html`, `llms.txt` e nei dati strutturati; tolto «da un pezzo a
+duecento»; tolte le righe «Supporti / Resa» sotto Ricamo e Stampa; tolta la campagna
+neve 2004 e la sezione Archivio 2004/2007; tolta la FAQ «Posso portare un capo mio?»;
+FAQ file logo riscritta (PDF / PNG trasparente / disegno a mano); spedizioni: «Spediamo
+ovunque»; dipinto a mano collegato a notprinted.it; foto del laboratorio nella sezione
+Dove siamo; nuova sezione **Linea Palocap** con le felpe e le t-shirt a marchio proprio
+(cinque foto fornite dal negozio, `assets/palocap-felpa-1..5.webp`).
